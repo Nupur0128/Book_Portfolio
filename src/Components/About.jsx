@@ -2,9 +2,22 @@ import { MdOutlineFlightTakeoff } from "react-icons/md";
 import { FaUserGear } from "react-icons/fa6";
 import { FcIdea } from "react-icons/fc";
 import { HiUserGroup } from "react-icons/hi";
+import { useEffect, useState } from 'react';
 import '../animations.css';
 
 function About() {
+  const [particles, setParticles] = useState([])
+
+  useEffect(() => {
+    const newParticles = Array.from({ length: 25 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 5,
+      duration: 5 + Math.random() * 5,
+      size: 3 + Math.random() * 6
+    }))
+    setParticles(newParticles)
+  }, [])
 
   const details = [
     { label: "Name", value: "Book Name" },
@@ -38,16 +51,30 @@ function About() {
   ]
 
   return (
-    <div className='min-h-screen flex justify-center items-center text-center px-4 bg-gradient-to-b from-blue-50 to-white'>
-      <div className='max-w-4xl mt-20'>
-        <h1 className='text-4xl md:text-5xl font-semibold text-gray-700 mb-4'>About the Book</h1>
-        <p className='text-gray-600 mb-8 leading-relaxed'>"How to Make 1 Crore" is your definitive guide to mastering personal finance and building wealth. This book provides practical, step-by-step guidance to help you navigate the complexities of investing and financial planning.</p>
-        {/* <hr className='my-8 text-yellow-600' /> */}
-        <div className="bg-gradient-to-b from-blue-100 to-white w-full bg-white max-w-md mx-auto p-4 rounded-xl shadow-md animate-fade-in-scale">
+    <div className='relative min-h-screen flex justify-center items-center text-center px-4 overflow-hidden' style={{ background: 'linear-gradient(to bottom, #1e1b4b, #312e81, #1e1b4b)' }}>
+      {particles.map(p => (
+        <div
+          key={p.id}
+          className='absolute rounded-full bg-purple-500 opacity-10 animate-float'
+          style={{
+            left: `${p.left}%`,
+            width: `${p.size}px`,
+            height: `${p.size}px`,
+            animationDelay: `${p.delay}s`,
+            animationDuration: `${p.duration}s`,
+            bottom: '-20px',
+            boxShadow: '0 0 20px rgba(139, 92, 246, 0.5)'
+          }}
+        />
+      ))}
+      <div className='max-w-4xl mt-20 z-10'>
+        <h1 className='text-4xl md:text-5xl font-semibold text-white mb-4 drop-shadow-lg'>About the Book</h1>
+        <p className='text-gray-200 mb-8 leading-relaxed drop-shadow-md'>"How to Make 1 Crore" is your definitive guide to mastering personal finance and building wealth. This book provides practical, step-by-step guidance to help you navigate the complexities of investing and financial planning.</p>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 max-w-md mx-auto p-4 rounded-xl shadow-2xl animate-fade-in-scale">
           {details.map((item, index) => (
-            <div key={index} className="py-3 border-b border-blue-200 last:border-none flex justify-between">
-              <span className="text-gray-500 font-semibold">{item.label}:</span>
-              <span className="text-gray-700">{item.value}</span>
+            <div key={index} className="py-3 border-b border-white/20 last:border-none flex justify-between">
+              <span className="text-gray-300 font-semibold">{item.label}:</span>
+              <span className="text-white">{item.value}</span>
             </div>
           ))}
         </div>
@@ -58,14 +85,15 @@ function About() {
             about.map((item, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-r from-blue-100 to-white w-full bg-white mt-10 text-left bg-white p-6 rounded-lg shadow-md text-center cursor-pointer hover-scale-small ${index % 2 === 0 ? 'animate-fade-in-left' : 'animate-fade-in-right'}`}
+                className={`group mt-10 cursor-pointer ${index % 2 === 0 ? 'animate-fade-in-left' : 'animate-fade-in-right'}`}
                 style={{ animationDelay: `${index * 0.15}s`, opacity: 0, animationFillMode: 'forwards' }}
               >
-                <div className='flex justify-center mb-4'>
-                  <div className='text-4xl text-blue-700 bg-blue-100 p-2 rounded-full'>{item.icon}</div>
+                <div className='absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-50 group-hover:opacity-100 blur transition' />
+                <div className='relative bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg shadow-2xl hover-scale-small'>
+                  <div className='text-4xl text-white bg-purple-500/30 p-2 rounded-full mb-4 mx-auto w-fit'>{item.icon}</div>
+                  <h2 className='text-2xl font-semibold text-white drop-shadow-lg'>{item.title}</h2>
+                  <p className='text-gray-200 leading-relaxed drop-shadow-md'>{item.paragraph}</p>
                 </div>
-                <h2 className='text-2xl font-semibold text-gray-800'>{item.title}</h2>
-                <p className='text-gray-600 leading-relaxed'>{item.paragraph}</p>
               </div>
             ))
           }
