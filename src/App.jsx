@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom"
-import Navbar from "./Navbar"
-import About from "./Components/About"
-import Author from "./Components/Author"
-import TOC from "./Components/TOC"
-import Reviews from "./Components/Review"
-import BuyNow from "./Components/BuyNow"
-import Home from "./Components/Home"
-import Footer from "./Footer"
+import Navbar from "./CommonComponent/Navbar"
+import About from "./pages/About"
+import Author from "./pages/Author"
+import TOC from "./pages/TOC"
+import Reviews from "./pages/Review"
+import BuyNow from "./pages/BuyNow"
+import Home from "./pages/Home"
+import Footer from "./CommonComponent/Footer"
 
 //toaster
 import { ToastContainer } from "react-toastify";
