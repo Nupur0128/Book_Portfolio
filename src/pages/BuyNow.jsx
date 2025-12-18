@@ -115,7 +115,7 @@ function BuyNow() {
     // },
   ]
   return (
-    <div className='relative px-4 py-8 w-full overflow-hidden' style={{ background: 'linear-gradient(to bottom, #312e81, #1e1b4b, #0f172a)' }}>
+    <div className='relative px-4 py-8 w-full overflow-hidden' style={{ background: 'linear-gradient(to top, #05080eff, #1e1b4b, #191595ff)' }}>
       {/* Animated Background Bits */}
       {bits.map(bit => (
         <div

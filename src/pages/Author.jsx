@@ -28,7 +28,7 @@ function Author() {
   ]
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(to left, #05080eff, #1e1b4b, #191595ff)' }}>
+    <div className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(to top, #05080eff, #1e1b4b, #191595ff)' }}>
       <style>{`
         @keyframes pulseGlow {
           0%, 100% {
