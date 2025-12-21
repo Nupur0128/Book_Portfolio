@@ -195,7 +195,7 @@
 .animate-float {
   animation: float linear infinite;
 }
-
+/* 
 @keyframes gradient-rotate {
   0% {
     background-position: 0% 50%;
@@ -211,4 +211,4 @@
 .animate-gradient-rotate {
   background-size: 200% 200%;
   animation: gradient-rotate 3s ease infinite;
-}
+} */

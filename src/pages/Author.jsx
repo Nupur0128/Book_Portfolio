@@ -1,121 +1,91 @@
-import AuthorImg from '../assets/images/author-img.jpg'
-import { useEffect, useState } from 'react'
-import { FaStar, FaBook, FaPen, FaAward } from 'react-icons/fa'
-// import '../animations.css'
-import '../commonCSS/heading.css'
+import { FaBook, FaGlobe, FaUsers, FaTrophy } from 'react-icons/fa'
 
 function Author() {
-  // const [particles, setParticles] = useState([])
-
-  // useEffect(() => {
-  //   const icons = [FaStar, FaBook, FaPen, FaAward]
-  //   const newParticles = Array.from({ length: 40 }, (_, i) => ({
-  //     id: i,
-  //     Icon: icons[Math.floor(Math.random() * icons.length)],
-  //     left: Math.random() * 100,
-  //     top: Math.random() * 100,
-  //     delay: Math.random() * 5,
-  //     duration: 8 + Math.random() * 12,
-  //     size: 12 + Math.random() * 20,
-  //     rotate: Math.random() * 360
-  //   }))
-  //   setParticles(newParticles)
-  // }, [])
-
-  const blockDetails = [
-    { label: 'Books', value: '15' },
-    { label: 'Copies Sold', value: '12M+' }
+  const stats = [
+    { icon: FaBook, title: "Bestselling", subtitle: "5 Books Published" },
+    { icon: FaUsers, title: "10,000+", subtitle: "Clients Helped" },
+    { icon: FaGlobe, title: "15+", subtitle: "Countries" },
+    { icon: FaTrophy, title: "12", subtitle: "Industry Awards" }
   ]
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(to left, #05080eff, #1e1b4b, #191595ff)' }}>
-      <style>{`
-        @keyframes pulseGlow {
-          0%, 100% {
-            box-shadow: 
-              0 0 30px #05080eff,
-              0 0 60px #1e1b4b,
-              0 0 90px #191595ff,
-              0 30px 120px #1e1b4b;
-          }
-          50% {
-            box-shadow: 
-              0 0 25px #191595ff,
-              0 0 60px #1e1b4b,
-              0 0 90px #05080eff,
-              0 30px 120px #191595ff;
-          }
-        }
-      `}</style>
-
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-
-          {/* Image Section */}
-          <div
-            className="md:col-span-4 flex flex-col items-center mt-16 md:mt-0"
-            style={{ perspective: '1000px' }}
-          >
-            <img
-              src={AuthorImg}
-              alt="Author"
-              className="w-64 h-64 border-4 border-blue-800 rounded-full object-cover mb-8 shadow-2xl animate-pulse-glow"
-              style={{ 
-                boxShadow: '0 30px 120px #1e1b4b',
-                animation: 'pulseGlow 2s ease-in-out infinite'
-              }}
-            />
-
-            {/* Details Cards */}
-            <div className="flex gap-6" style={{ perspective: '1000px' }}>
-              {blockDetails.map((item, index) => (
-                <div
-                  key={index}
-                  className="card-3d rounded-2xl border-2 px-6 py-5 text-center shadow-2xl min-w-[100px] cursor-pointer hover:scale-110 transition-transform duration-300"
-                  style={{
-                    background: 'linear-gradient(to bottom, #2920a7ff, #120f6cff)',
-                    animationDelay: `${index * 0.3}s`,
-                  }}
-                >
-                  <div className="text-3xl font-bold text-white mb-1 drop-shadow-lg">
-                    {item.value}
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-white to-purple-50 py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+          
+          {/* Left Section - Author Profile */}
+          <div className="relative lg:col-span-2">
+            {/* Decorative Elements Behind Card */}
+            <div className="absolute -top-8 -left-8 w-24 h-24 bg-yellow-200 rounded-2xl opacity-60 z-0"></div>
+            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-200 rounded-full opacity-60 z-0"></div>
+            
+            {/* Background Card */}
+            <div className="relative bg-white rounded-2xl p-12 min-h-[550px] shadow-lg z-10">
+              {/* Content */}
+              <div className="flex flex-col items-center text-center pt-16">
+                {/* Profile Image with Initials */}
+                <div className="w-32 h-32 bg-purple-500 rounded-full flex items-center justify-center mb-8 shadow-lg">
+                  <span className="text-white text-4xl font-bold">RS</span>
+                </div>
+                
+                <h2 className="font-serif text-2xl font-bold text-gray-800 mb-2">Rajesh Sharma</h2>
+                <p className="text-purple-600 font-medium mb-16">Financial Expert & Author</p>
+              </div>
+              
+              {/* Experience Badge */}
+              <div className="absolute bottom-8 left-8 flex items-center bg-white rounded-xl px-4 py-3 shadow-xl">
+                <div className="w-8 h-8 bg-purple-500 rounded-xl flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-xs">R</span>
+                </div>
+                <div className="text-black">
+                  <div className="text-md font-semibold">20+ Years</div>
+                  <div className="text-xs">Experience</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right Section - Author Info */}
+          <div className="lg:col-span-3">
+            {/* Badge */}
+            <div className="inline-block bg-purple-200 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              Meet the Author
+            </div>
+            
+            <h1 className="font-serif text-4xl font-semibold text-gray-900 mb-4">Rajesh Sharma</h1>
+            <p className="text-xl text-purple-600 mb-8">Financial Strategist | Wealth Coach | Bestselling Author</p>
+            
+            <div className="space-y-4 text-gray-700 mb-8">
+              <p>
+                With over two decades of experience in financial planning and wealth management, 
+                Rajesh Sharma has helped thousands of individuals transform their relationship with money.
+              </p>
+              <p>
+                His journey from a middle-class upbringing to becoming a self-made crorepati gives him 
+                unique insights into the challenges and opportunities that await aspiring wealth builders.
+              </p>
+              <p>
+                As a certified financial planner and former investment banker, Rajesh combines 
+                theoretical knowledge with practical wisdom, making complex financial concepts 
+                accessible to everyone.
+              </p>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {stats.map((stat, index) => (
+                <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-lg">
+                  <div className="w-8 h-8 bg-purple-100 rounded-md flex items-center justify-center mr-4">
+                    <stat.icon className="text-purple-600 text-xl" />
                   </div>
-                  <div className="text-sm text-white font-semibold">
-                    {item.label}
+                  <div>
+                    <div className="font-serif text-lg text-gray-800">{stat.title}</div>
+                    <div className="text-sm text-gray-600">{stat.subtitle}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Content Section */}
-          <div className="md:col-span-8 text-center md:text-left">
-            <h1 className="tracking-in-expand text-4xl md:text-5xl font-semibold text-white mb-4">
-              Author Name
-            </h1>
-
-            <p className="text-gray-300 mb-8 leading-relaxed px-2 md:px-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              veritatis laudantium sapiente doloribus aspernatur sed nihil rem
-              error iste quia exercitationem nulla sit illum maxime facere
-              dolorem repellendus.
-            </p>
-
-            <p className="text-gray-300 mb-8 leading-relaxed px-2 md:px-0">
-              Tempora repellat est optio pariatur molestias quos assumenda id
-              alias autem soluta aperiam illum recusandae ea nam nisi non ducimus
-              incidunt corrupti.
-            </p>
-
-            <div className="space-y-2 mb-16 md:mb-0">
-              <p className="text-lg text-white">Author Email – Email</p>
-              <p className="text-lg text-white">Other Books – Details</p>
-              <p className="text-lg text-white">
-                Connect with Author – Social Media
-              </p>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>

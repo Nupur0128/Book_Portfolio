@@ -1,12 +1,10 @@
-import girlImg from '../assets/images/mern-outbg.png'
+import menImg from '../images/hero-author.png'
 import About from './About'
 import Author from './Author'
 import TOC from './TOC'
 import Review from './Review'
 import BuyNow from './BuyNow'
-import '../animations.css'
-import DarkVeil from './DarkVeil';
-
+// import '../animations.css'
 
 import '../commonCSS/button.css'
 import KeyHighlights from './KeyHighlights'
@@ -14,31 +12,90 @@ import KeyHighlights from './KeyHighlights'
 function Home() {
 
   return (
-    <div id="home">
-        <div className='relative min-h-screen pt-4 md:pt-16 flex items-center justify-center overflow-hidden' style={{ background: 'linear-gradient(to bottom, #05080eff, #1e1b4b, #191595ff)' }}>
-          <div className='container mx-auto px-4 mt-32 z-10' >
+    <div id="home" className='bg-gradient-to-br from-purple-100 via-white to-purple-50 mt-16'>
+        <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+          <div className='container px-6 py-8 z-10'>
             {/* hero section */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
-              <div className='flex justify-center'>
-                <img src={girlImg} alt='The Silent Voyager' className='w-full max-w-lg h-auto' style={{ mixBlendMode: 'multiply', filter: 'contrast(1.2)' }} />
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+              
+              <div className='text-left space-y-6'>
+                {/* Bestselling Badge */}
+                <div className='inline-flex items-center bg-purple-200 text-purple-800 px-4 py-2 rounded-full text-sm font-medium'>
+                  <span className='text-yellow-500 mr-2'>⭐</span>
+                  Bestselling Financial Guide
+                </div>
+                
+                {/* Main Heading */}
+                <div className='space-y-2'>
+                  <h1 className='font-serif text-2xl lg:text-5xl font-bold text-gray-800 leading-tight'>
+                    Your Practical Guide
+                  </h1>
+                  <h2 className='font-serif text-2xl lg:text-5xl font-bold text-purple-400 leading-tight'>
+                    to Building Wealth
+                  </h2>
+                  <h3 className='font-serif text-2xl lg:text-5xl font-bold text-yellow-500 leading-tight'>
+                    Smartly
+                  </h3>
+                </div>
+                
+                {/* Description */}
+                <p className='text-gray-600 text-lg leading-relaxed max-w-lg'>
+                  Discover proven strategies and actionable insights to transform your financial future. Learn the secrets that separate the wealthy from the rest.
+                </p>
+                
+                {/* Buttons */}
+                <div className='flex flex-col sm:flex-row gap-4'>
+                  <button className='bounce-top bg-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-purple-700 transition shadow-lg flex items-center justify-center'>
+                    Buy Now
+                    <span className='ml-2'>→</span>
+                  </button>
+                  <button className='bounce-bottom border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-2xl font-semibold hover:border-purple-500 hover:bg-gray-50 transition'>
+                    Read Preview
+                  </button>
+                </div>
+                
+                {/* Statistics */}
+                <div className='flex gap-8 pt-4'>
+                  <div>
+                    <div className='font-serif text-3xl font-bold text-gray-800'>50K+</div>
+                    <div className='font-serif text-gray-600 text-sm'>Copies Sold</div>
+                  </div>
+                  <div>
+                    <div className='font-serif text-3xl font-bold text-gray-800'>4.9</div>
+                    <div className='font-serif text-gray-600 text-sm'>Reader Rating</div>
+                  </div>
+                  <div>
+                    <div className='font-serif text-3xl font-bold text-gray-800'>12</div>
+                    <div className='font-serif text-gray-600 text-sm'>Countries</div>
+                  </div>
+                </div>
               </div>
-              <div className='text-center md:text-left'>
-                <h1 className='text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg'>
-                  <span className='animate-typewriter'>
-                    How to Make 1 Crore
-                  </span>
-                </h1>
-                <p className='text-white mb-4 drop-shadow-md'>By Author Name</p>
-                <p className='text-gray-200 mb-8 leading-relaxed drop-shadow-md'>Your definitive guide to mastering personal finance and building wealth.</p>
-                <div className='space-y-4'>
-                  <button className='bounce-top w-full md:w-auto bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition shadow-lg'>Buy Now</button>
-                  <button className='bounce-bottom w-full md:w-auto border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition ml-0 md:ml-4 shadow-lg'>Read Sample</button>
+              
+              {/* Image section */}
+              <div className='relative flex justify-center lg:justify-end'>
+                <div className='relative'>
+                  <img 
+                    src={menImg} 
+                    alt='Financial Guide Author' 
+                    className='w-full max-w-md lg:max-w-md h-auto rounded-2xl shadow-xl shadow-purple-400'
+                  />
+                  
+                  {/* Price Tag */}
+                  <div className='absolute bottom-4 right-4 bg-white text-black px-4 py-2 rounded-2xl shadow-lg'>
+                    <div className='flex items-center space-x-2'>
+                      <span className='text-2xl text-black bg-yellow-400 rounded-md'>🏷️</span>
+                      <div>
+                        <div className='font-bold text-lg'>₹499</div>
+                        <div className='text-xs'>Special Price</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
       </div>
-      <KeyHighlights />
+      {/* <KeyHighlights /> */}
       <div id="about"><About /></div>
       <div id="author"><Author /></div>
       <div id="toc"><TOC /></div>

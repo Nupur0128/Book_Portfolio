@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   background: #0f172a;
-}
+} */
 
 * {
   margin: 0;
@@ -12,9 +12,17 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html, #root {
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden;
   height: 100%;
+}
+
+body {
+  padding-top: 80px;
 }
