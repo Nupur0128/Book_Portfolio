@@ -15,10 +15,24 @@ function BuyNow() {
 
   return (
     <div className='bg-gradient-to-br from-purple-100 via-white to-purple-50 px-4 py-16'>
-      <div className="container mx-auto max-w-sm">
+      <div className="container mx-auto max-w-4xl">
+        {/* Header Section */}
+        <div className='text-center mb-16'>
+          <div className='inline-flex items-center bg-purple-200 text-purple-800 px-6 py-3 rounded-full text-sm font-medium mb-8'>
+            Get Your Copy
+          </div>
+          <h1 className="font-serif text-gray-800 text-3xl md:text-5xl font-semibold mb-4">
+            Start Your Journey to <span className="text-yellow-500">One Crore</span>
+          </h1>
+          <p className='text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto mb-12'>
+            Invest in yourself today and unlock the secrets to building lasting wealth. Your financial transformation begins with a single step.
+          </p>
+        </div>
+
+        <div className="max-w-sm mx-auto">
         <div className='bg-white rounded-3xl p-6 shadow-2xl relative'>
           {/* Bestseller Badge */}
-          <div className="absolute -top-3 right-6 bg-orange-400 text-white px-4 py-1 rounded-full text-sm font-bold">
+          <div className="absolute -top-0 right-0 bg-yellow-400 text-white px-4 py-1 rounded-bl-xl rounded-tr-xl text-sm font-semibold">
             Bestseller
           </div>
 
@@ -82,9 +96,10 @@ function BuyNow() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* Money-Back Guarantee Box */}
-        <div className='bg-purple-100 rounded-2xl p-6 mt-6 text-center max-w-xl'>
+        <div className='bg-purple-100 rounded-2xl p-6 mt-6 text-center max-w-xl mx-auto'>
           <div className="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
             <FiShield className="text-white text-xl" />
           </div>

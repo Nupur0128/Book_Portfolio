@@ -1,9 +1,10 @@
-import { MdOutlineFlightTakeoff } from "react-icons/md";
-import { FaUserGear } from "react-icons/fa6";
-import { HiUserGroup } from "react-icons/hi";
 import { useEffect, useState } from 'react';
 import { IoIosBulb } from "react-icons/io";
-
+import { FiTarget } from "react-icons/fi";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { FaShieldAlt } from "react-icons/fa";
+import { FaPeopleRobbery } from "react-icons/fa6";
+import { PiMedalLight } from "react-icons/pi";
 import '../animations.css';
 
 function About() {
@@ -24,32 +25,32 @@ function About() {
     {
       title: 'Clear Roadmap',
       description: 'Step-by-step guidance from where you are now to your first crore.',
-      icon: 'target'
+      icon: <FiTarget/>
     },
     {
       title: 'Practical Strategies',
       description: 'Real-world tactics that work in today\'s economy, not outdated advice.',
-      icon: 'star'
+      icon: <IoIosBulb/>
     },
     {
       title: 'Investment Secrets',
       description: 'Learn how to make your money work harder than you do.',
-      icon: 'chart'
+      icon: <FaArrowTrendUp/>
     },
     {
       title: 'Risk Management',
       description: 'Protect your wealth while growing it with smart diversification.',
-      icon: 'shield'
+      icon: <FaShieldAlt/>
     },
     {
       title: 'Success Stories',
       description: 'Real examples of people who followed this path to financial freedom.',
-      icon: 'people'
+      icon: <FaPeopleRobbery/>
     },
     {
       title: 'Proven Results',
       description: 'Backed by research and thousands of success stories worldwide.',
-      icon: 'check'
+      icon: <PiMedalLight/>
     }
   ]
 
@@ -86,19 +87,14 @@ function About() {
         </div>
 
         {/* Features Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16'>
           {cards.map((card, index) => (
-            <div key={index} className='bg-gray-50 p-6 rounded-xl'>
-              <div className='w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-4'>
-                {card.icon === 'target' && <svg className='w-6 h-6 text-white' fill='currentColor' viewBox='0 0 24 24'><circle cx='12' cy='12' r='3' /><circle cx='12' cy='12' r='8' fill='none' stroke='currentColor' strokeWidth='2' /></svg>}
-                {card.icon === 'star' && <svg className='w-6 h-6 text-white' fill='currentColor' viewBox='0 0 24 24'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' /></svg>}
-                {card.icon === 'chart' && <svg className='w-6 h-6 text-white' fill='currentColor' viewBox='0 0 24 24'><path d='M7 14l3-3 3 3 5-5v4h4V7h-6l5 5-3 3-3-3-3 3z' /></svg>}
-                {card.icon === 'shield' && <svg className='w-6 h-6 text-white' fill='currentColor' viewBox='0 0 24 24'><path d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z' /></svg>}
-                {card.icon === 'people' && <svg className='w-6 h-6 text-white' fill='currentColor' viewBox='0 0 24 24'><path d='M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2 1l-3 4v7h2v7h3v-7h2z' /></svg>}
-                {card.icon === 'check' && <svg className='w-6 h-6 text-white' fill='currentColor' viewBox='0 0 24 24'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z' /></svg>}
+            <div key={index} className='bg-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-purple-400 border border-gray-100'>
+              <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg'>
+                <div className='text-white text-xl'>{card.icon}</div>
               </div>
-              <h3 className='font-serif text-xl text-gray-800 mb-2'>{card.title}</h3>
-              <p className='text-gray-600'>{card.description}</p>
+              <h3 className='font-serif text-xl font-medium text-gray-800 mb-1'>{card.title}</h3>
+              <p className='text-gray-600 leading-relaxed'>{card.description}</p>
             </div>
           ))}
         </div>
@@ -144,8 +140,8 @@ function About() {
             </div>
           </div>
           
-          <div className='bg-gray-200 p-6 rounded-xl'>
-            <p className='text-black italic text-lg mb-4'>"The principles in this book helped me go from ₹50,000 savings to my first crore in just 4 years."</p>
+          <div className='bg-gray-200 p-4 rounded-xl'>
+            <p className='text-black italic text-lg mb-3'>"The principles in this book helped me go from ₹50,000 savings to my first crore in just 4 years."</p>
             <div className='flex items-center'>
               <div className='w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3'>
                 <span className='text-white font-bold'>P</span>

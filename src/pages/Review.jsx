@@ -92,7 +92,7 @@ function Review() {
         {/* Reviews */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg relative">
+            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg relative transition-all duration-300 hover:-translate-y-2 hover:shadow-purple-400">
               <div className="absolute -top-3 -right-3 w-10 h-10 bg-purple-400 rounded-xl flex items-center justify-center text-white font-bold text-lg">
                <RiDoubleQuotesR />
               </div>

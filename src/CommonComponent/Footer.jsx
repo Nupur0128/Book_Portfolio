@@ -29,10 +29,10 @@ function Footer() {
                             Your practical guide to building wealth smartly. Join thousands of readers who have transformed their financial future.
                         </p>
                         <div className='flex gap-3'>
-                            <FaTwitter className='text-gray-400 hover:text-white cursor-pointer' />
-                            <FaLinkedin className='text-gray-400 hover:text-white cursor-pointer' />
-                            <FaInstagram className='text-gray-400 hover:text-white cursor-pointer' />
-                            <FaYoutube className='text-gray-400 hover:text-white cursor-pointer' />
+                            <FaTwitter className='text-gray-400 hover:text-purple-500 cursor-pointer' />
+                            <FaLinkedin className='text-gray-400 hover:text-purple-500 cursor-pointer' />
+                            <FaInstagram className='text-gray-400 hover:text-purple-500 cursor-pointer' />
+                            <FaYoutube className='text-gray-400 hover:text-purple-500 cursor-pointer' />
                         </div>
                     </div>
 
@@ -40,12 +40,12 @@ function Footer() {
                     <div>
                         <h3 className='text-lg font-semibold mb-4'>Quick Links</h3>
                         <ul className='space-y-2 text-sm'>
-                            <li><a href='#' className='text-gray-300 hover:text-white'>Home</a></li>
-                            <li><a href='#' className='text-gray-300 hover:text-white'>About the Book</a></li>
-                            <li><a href='#' className='text-gray-300 hover:text-white'>Author</a></li>
-                            <li><a href='#' className='text-gray-300 hover:text-white'>Chapters</a></li>
-                            <li><a href='#' className='text-gray-300 hover:text-white'>Reviews</a></li>
-                            <li><a href='#' className='text-gray-300 hover:text-white'>Buy Now</a></li>
+                            <li><a href='#' className='text-gray-300 hover:text-purple-500'>Home</a></li>
+                            <li><a href='#' className='text-gray-300 hover:text-purple-500'>About the Book</a></li>
+                            <li><a href='#' className='text-gray-300 hover:text-purple-500'>Author</a></li>
+                            <li><a href='#' className='text-gray-300 hover:text-purple-500'>Chapters</a></li>
+                            <li><a href='#' className='text-gray-300 hover:text-purple-500'>Reviews</a></li>
+                            <li><a href='#' className='text-gray-300 hover:text-purple-500'>Buy Now</a></li>
                         </ul>
                     </div>
 

@@ -1,15 +1,16 @@
-import menImg from '../images/hero-author.png'
+import menImg from '../images/chahat-sir-img.png'
 import About from './About'
 import Author from './Author'
 import TOC from './TOC'
 import Review from './Review'
 import BuyNow from './BuyNow'
 // import '../animations.css'
-
 import '../commonCSS/button.css'
-import KeyHighlights from './KeyHighlights'
 
 function Home() {
+  const scrollToBuyNow = () => {
+    document.getElementById('buynow').scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div id="home" className='bg-gradient-to-br from-purple-100 via-white to-purple-50 mt-16'>
@@ -45,7 +46,7 @@ function Home() {
                 
                 {/* Buttons */}
                 <div className='flex flex-col sm:flex-row gap-4'>
-                  <button className='bounce-top bg-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-purple-700 transition shadow-lg flex items-center justify-center'>
+                  <button onClick={scrollToBuyNow} className='bounce-top bg-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-purple-700 transition shadow-lg flex items-center justify-center'>
                     Buy Now
                     <span className='ml-2'>→</span>
                   </button>

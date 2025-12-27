@@ -2,7 +2,7 @@ import { FaBook, FaGlobe, FaUsers, FaTrophy } from 'react-icons/fa'
 
 function Author() {
   const stats = [
-    { icon: FaBook, title: "Bestselling", subtitle: "5 Books Published" },
+    { icon: FaBook, title: "Bestselling", subtitle: "1 Book Published" },
     { icon: FaUsers, title: "10,000+", subtitle: "Clients Helped" },
     { icon: FaGlobe, title: "15+", subtitle: "Countries" },
     { icon: FaTrophy, title: "12", subtitle: "Industry Awards" }
@@ -25,10 +25,10 @@ function Author() {
               <div className="flex flex-col items-center text-center pt-16">
                 {/* Profile Image with Initials */}
                 <div className="w-32 h-32 bg-purple-500 rounded-full flex items-center justify-center mb-8 shadow-lg">
-                  <span className="text-white text-4xl font-bold">RS</span>
+                  <span className="text-white text-4xl font-bold">CT</span>
                 </div>
                 
-                <h2 className="font-serif text-2xl font-bold text-gray-800 mb-2">Rajesh Sharma</h2>
+                <h2 className="font-serif text-2xl font-bold text-gray-800 mb-2">Mr. Chahat Tiwari</h2>
                 <p className="text-purple-600 font-medium mb-16">Financial Expert & Author</p>
               </div>
               
@@ -52,7 +52,7 @@ function Author() {
               Meet the Author
             </div>
             
-            <h1 className="font-serif text-4xl font-semibold text-gray-900 mb-4">Rajesh Sharma</h1>
+            <h1 className="font-serif text-4xl font-semibold text-gray-900 mb-4">Mr. Chahat Tiwari</h1>
             <p className="text-xl text-purple-600 mb-8">Financial Strategist | Wealth Coach | Bestselling Author</p>
             
             <div className="space-y-4 text-gray-700 mb-8">
@@ -74,7 +74,7 @@ function Author() {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {stats.map((stat, index) => (
-                <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-lg">
+                <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-purple-400">
                   <div className="w-8 h-8 bg-purple-100 rounded-md flex items-center justify-center mr-4">
                     <stat.icon className="text-purple-600 text-xl" />
                   </div>

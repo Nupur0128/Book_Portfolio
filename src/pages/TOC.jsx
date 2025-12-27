@@ -103,7 +103,7 @@ function TOC() {
             chapters.map((chapter, index) => (
               <div
                 key={index}
-                className='bg-white rounded-2xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group'
+                className='bg-white rounded-2xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group hover:shadow-yellow-400'
               >
                 <div className='flex items-center gap-3'>
                   <div className={`${chapter.bgColor} rounded-xl p-3 text-white flex-shrink-0`}>

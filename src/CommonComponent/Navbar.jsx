@@ -23,6 +23,10 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToBuyNow = () => {
+    document.getElementById('buynow').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-sm py-4 z-50">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
@@ -52,7 +56,7 @@ const Navbar = () => {
 
         {/* Buy Now Button */}
         <div className="hidden md:block">
-          <button className="bg-yellow-500 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+          <button onClick={scrollToBuyNow} className="bg-yellow-500 text-white px-6 py-2 rounded-2xl font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-400/50">
             Buy Now
           </button>
         </div>
@@ -80,7 +84,7 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <button className="w-full bg-orange-400 hover:bg-orange-500 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+            <button className="w-full bg-yellow-500 text-black px-6 py-2 rounded-full font-medium transition-all duration-300 hover:opacity-60 hover:shadow-lg hover:shadow-yellow-400/50">
               Buy Now
             </button>
           </div>
