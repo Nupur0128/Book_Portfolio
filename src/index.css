@@ -41,9 +41,3 @@ footer {
   margin: 0 !important;
   padding-bottom: 0 !important;
 }
-
-/* Remove ToastContainer bottom margin */
-.Toastify__toast-container {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}

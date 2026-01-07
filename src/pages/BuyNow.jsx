@@ -22,7 +22,7 @@ function BuyNow() {
             Get Your Copy
           </div>
           <h1 className="font-serif text-gray-800 text-3xl md:text-5xl font-semibold mb-4">
-            Start Your Journey to <span className="text-yellow-500">One Crore</span>
+            Start Your Journey to <span className="text-yellow-500">1 Crore</span>
           </h1>
           <p className='text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto mb-12'>
             Invest in yourself today and unlock the secrets to building lasting wealth. Your financial transformation begins with a single step.

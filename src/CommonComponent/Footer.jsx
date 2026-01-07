@@ -29,18 +29,18 @@ function Footer() {
                             Your practical guide to building wealth smartly. Join thousands of readers who have transformed their financial future.
                         </p>
                         <div className='flex gap-3'>
-                            <div className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
+                            <a href='https://x.com/kodanda_invest' target='_blank' rel='noopener noreferrer' className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
                                 <FaTwitter className='text-gray-400 hover:text-white' />
-                            </div>
-                            <div className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
+                            </a>
+                            <a href='https://www.linkedin.com/company/ak-holdings-pvt-ltd/?viewAsMember=true' target='_blank' rel='noopener noreferrer' className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
                                 <FaLinkedin className='text-gray-400 hover:text-white' />
-                            </div>
-                            <div className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
+                            </a>
+                            <a href='https://www.instagram.com/official_kodanda?igsh=MTl5NXppNjN6OHdyYg==' target='_blank' rel='noopener noreferrer' className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
                                 <FaInstagram className='text-gray-400 hover:text-white' />
-                            </div>
-                            <div className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
+                            </a>
+                            <a href='https://www.youtube.com/@kodanda_investments' target='_blank' rel='noopener noreferrer' className='bg-gray-700 p-2 rounded-lg hover:bg-purple-500 cursor-pointer'>
                                 <FaYoutube className='text-gray-400 hover:text-white' />
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -102,7 +102,7 @@ function Footer() {
                 </div>
 
                 {/* Bottom Section */}
-                <div className='border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm'>
+                <div className='border-t border-gray-700 mt-8 pt-6 pb-6 flex flex-col md:flex-row justify-between items-center text-sm'>
                     <p className='text-gray-400 mb-4 md:mb-0'>
                         © 2024 How to Make One Crore. All rights reserved.
                     </p>

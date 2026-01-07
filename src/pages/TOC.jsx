@@ -98,21 +98,36 @@ function TOC() {
           <p className='text-white max-w-2xl mx-auto'>Each chapter is carefully crafted to take you one step closer to your financial goals with actionable strategies and real-world examples.</p>
         </div>
         
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto'>
           {
             chapters.map((chapter, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group ${chapter.bgColor === 'bg-yellow-500' ? 'hover:shadow-yellow-400' : 'hover:shadow-purple-400'}`}
+                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 cursor-pointer border border-gray-100 overflow-hidden"
               >
-                <div className='flex items-center gap-3'>
-                  <div className={`${chapter.bgColor} rounded-xl p-3 text-white flex-shrink-0`}>
-                    {chapter.icon}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-yellow-400/20 to-purple-500/20 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className={`${chapter.bgColor} rounded-2xl p-4 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      {chapter.icon}
+                    </div>
+                    <span className="text-3xl font-bold text-gray-200 group-hover:text-gray-300 transition-colors duration-300">{chapter.id}</span>
                   </div>
-                  <div className='flex-1'>
-                    <div className='text-sm text-purple-500 font-medium mb-1 bg-purple-100 px-2 py-1 rounded-full inline-block'>Chapter {chapter.id}</div>
-                    <h3 className='font-serif text-md text-gray-800 mb-1'>{chapter.title}</h3>
-                    <p className='text-gray-600 text-sm'>{chapter.description}</p>
+                  
+                  <div className="space-y-3">
+                    <div className="inline-block bg-gradient-to-r from-purple-500 to-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">Chapter {chapter.id}</div>
+                    <h3 className="font-serif text-xl font-bold text-gray-800 group-hover:text-purple-700 transition-colors duration-300 leading-tight">{chapter.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{chapter.description}</p>
+                  </div>
+                  
+                  <div className="mt-4 pt-2 border-t border-gray-100">
+                    <div className="flex items-center text-purple-500 text-sm font-medium group-hover:text-purple-700 transition-colors duration-300">
+                      <span>Read Chapter</span>
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>

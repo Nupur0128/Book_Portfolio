@@ -35,8 +35,8 @@ const Navbar = () => {
           <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
             <span className="text-white font-bold text-lg"><FaBook /></span>
           </div>
-          <span className="text-xl font-semibold text-gray-900">
-            One Crore
+          <span className="font-serif text-xl font-semibold text-gray-900">
+            1 Crore
           </span>
         </a>
 

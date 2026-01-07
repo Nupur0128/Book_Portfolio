@@ -43,14 +43,14 @@ function Home() {
               {/* Main Heading */}
               <div className='space-y-2'>
                 <h1 className='font-serif text-3xl lg:text-5xl font-bold text-gray-800 leading-tight'>
-                  Building Wealth  
+                  Building Wealth with
                 </h1>
                 <h2 className='font-serif text-3xl lg:text-5xl font-bold text-purple-400 leading-tight'>
-                  with Financial
+                   Financial Discipline
                 </h2>
-                <h3 className='font-serif text-3xl lg:text-5xl font-bold text-yellow-500 leading-tight'>
-                  Discipline
-                </h3>
+                {/* <h3 className='font-serif text-3xl lg:text-5xl font-bold text-yellow-500 leading-tight'>
+                  
+                </h3> */}
               </div>
 
               {/* Description */}

@@ -8,9 +8,6 @@ import BuyNow from "./pages/BuyNow"
 import Home from "./pages/Home"
 import Footer from "./CommonComponent/Footer"
 
-//toaster
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 
@@ -26,7 +23,6 @@ function App() {
         <Route path="/buynow" element={<BuyNow />} />
       </Routes>
       <Footer/>
-      <ToastContainer />
     </div>
   )
 }

@@ -20,20 +20,16 @@ function Author() {
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-200 rounded-full opacity-60 z-0"></div>
             
             {/* Background Card */}
-            <div className="relative bg-white rounded-2xl p-12 min-h-[550px] shadow-lg z-10">
-              {/* Content */}
-              <div className="flex flex-col items-center text-center pt-16">
-                {/* Profile Image with Initials */}
-                <div className="w-32 h-32 bg-purple-500 rounded-full flex items-center justify-center mb-8 shadow-lg">
-                  <span className="text-white text-4xl font-bold">CT</span>
-                </div>
-                
-                <h2 className="font-serif text-2xl font-bold text-gray-800 mb-2">Mr. Chahat Tiwari</h2>
-                <p className="text-purple-600 font-medium mb-16">Financial Expert & Author</p>
-              </div>
+            <div className="relative bg-white rounded-2xl shadow-lg z-10 h-fit">
+              {/* Author Image */}
+              <img 
+                src="src/images/chahat-sir4.png" 
+                alt="Mr. Chahat Tiwari" 
+                className="w-full h-[370px] sm:h-[550px] object-cover rounded-2xl"
+              />
               
               {/* Experience Badge */}
-              <div className="absolute bottom-8 left-8 flex items-center bg-white rounded-xl px-4 py-3 shadow-xl">
+              <div className="absolute bottom-8 -left-4 sm:-left-10 flex items-center bg-white rounded-xl px-4 py-3 shadow-xl">
                 <div className="w-8 h-8 bg-purple-500 rounded-xl flex items-center justify-center mr-3">
                   <span className="text-white font-bold text-xs">R</span>
                 </div>
@@ -53,7 +49,7 @@ function Author() {
             </div>
             
             <h1 className="font-serif text-4xl font-semibold text-gray-900 mb-4">Mr. Chahat Tiwari</h1>
-            <p className="text-xl text-purple-600 mb-8">Financial Strategist | Wealth Coach | Bestselling Author</p>
+            <p className="text-xl text-purple-600 mb-8">Investment Strategies | Financial Markets | Author | CEO</p>
             
             <div className="space-y-4 text-gray-700 mb-8">
               <p>

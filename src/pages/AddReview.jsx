@@ -1,5 +1,3 @@
-import { toast } from "react-toastify";
-
 function AddReview({ isOpen, onClose, onReviewAdded }) {
     if (!isOpen) return null;
 
@@ -19,7 +17,6 @@ function AddReview({ isOpen, onClose, onReviewAdded }) {
         existingReviews.push(review);
         localStorage.setItem('reviews', JSON.stringify(existingReviews));
         
-        toast.success("Review Added Successfully ✅");
         onReviewAdded?.(review);
         e.target.reset();
         onClose();

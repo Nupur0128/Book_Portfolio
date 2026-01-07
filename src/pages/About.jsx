@@ -77,9 +77,9 @@ function About() {
             About the Book
           </div>
           <h1 className="font-serif text-gray-800 text-4xl md:text-5xl font-semibold mb-6">
-            Why This Book Will <span className="text-purple-500">Change Your</span>
+            Why This Book Will
             <br />
-            <span className="text-purple-500">Life</span>
+            <span className="text-purple-500">Change Your Life</span>
           </h1>
           <p className='text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto mb-12'>
             "How to Make One Crore" isn't just another finance book. It's a comprehensive blueprint designed specifically for ambitious individuals who are ready to take control of their financial destiny.
@@ -144,11 +144,11 @@ function About() {
             <p className='text-black italic text-lg mb-3'>"The principles in this book helped me go from ₹50,000 savings to my first crore in just 4 years."</p>
             <div className='flex items-center'>
               <div className='w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3'>
-                <span className='text-white font-bold'>P</span>
+                <span className='text-white font-bold'>CT</span>
               </div>
               <div>
-                <div className='font-semibold text-gray-800'>Priya Sharma</div>
-                <div className='text-gray-600 text-sm'>Software Engineer, Bangalore</div>
+                <div className='font-semibold text-gray-800'>Chahat Tiwari</div>
+                <div className='text-gray-600 text-sm'>Chief Executive Officer @ kodanda Investments Investment Pvt. Ltd</div>
               </div>
             </div>
           </div>
